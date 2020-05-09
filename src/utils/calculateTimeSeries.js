@@ -3,8 +3,8 @@ import mapDate from './mapDate';
 const calculateTimeSeries = ({ years, mu, sigma, fee, initialSum, monthlySum }) => {
 
   var series = [];
-  for (var k = 0; k <= 12 * years; ++k) {
-    series.push(mapDate({ t: k / 12, mu, sigma, fee, initialSum, monthlySum }));
+  for (var l = 0; l <= 12 * years; ++l) {
+    series.push(mapDate({ t: l / 12, mu, sigma, fee, initialSum, monthlySum }));
   }
 
   let allSeries = {

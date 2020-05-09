@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Menu from './components/Menu/menu';
+import Menu from './components/Menu/Menu';
 import RiskLevelSelector from './components/RiskLevelSelector/Risk-level-selector';
 import InvestmentInput from './components/InvestmentInput/InvestmentInput';
 import TableScreen from './screens/TableScreen';
@@ -35,7 +35,7 @@ export default class App extends React.Component {
     render() {
         const { riskLevel, initialSum, cones} = this.state;
         return (
-            <Router>
+            <Router basename="/scalable">
                 <div>
                     <Menu/>
                     <InvestmentInput onChangeInitialInvestment={this.onChangeInitialInvestment} defaultInvestment={initialSum}/>
